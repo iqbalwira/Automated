@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20230223 21:41:07.430" generator="Robot 3.0.4 (Python 2.7.18 on win32)">
+<suite source="C:\Users\MSI-14\Documents\bookdepository\bookdepository\destructive\TestCase_SearchAndAddToBasket.robot" id="s1" name="TestCase SearchAndAddToBasket">
+<test id="s1-t1" name="Search And Add To Basket">
+<kw type="setup" name="Open Browser With Timeout" library="Keywords">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${LANDING_URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20230223 21:41:08.117" level="INFO">Opening browser 'Chrome' to base url 'https://www.bookdepository.com'</msg>
+<status status="PASS" endtime="20230223 21:41:13.219" starttime="20230223 21:41:08.117"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20230223 21:41:13.350" starttime="20230223 21:41:13.219"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230223 21:41:16.368" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230223 21:41:16.368" starttime="20230223 21:41:13.350"></status>
+</kw>
+<timeout value="2 minutes"></timeout>
+<status status="PASS" endtime="20230223 21:41:16.368" starttime="20230223 21:41:08.117"></status>
+</kw>
+<kw name="Click Menu" library="Keywords">
+<arguments>
+<arg>Sign in/Join</arg>
+</arguments>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>sizzle=${NAVBAR_MENU}:contains(${menu})</arg>
+</arguments>
+<msg timestamp="20230223 21:41:16.370" level="INFO">Clicking element 'sizzle=.mob-nav-account:contains(Sign in/Join)'.</msg>
+<status status="PASS" endtime="20230223 21:41:18.329" starttime="20230223 21:41:16.370"></status>
+</kw>
+<status status="PASS" endtime="20230223 21:41:18.329" starttime="20230223 21:41:16.370"></status>
+</kw>
+<kw name="Login" library="Keywords">
+<kw name="Select Frame" library="Selenium2Library">
+<doc>Sets frame identified by `locator` as current frame.</doc>
+<arguments>
+<arg>css=.signin-iframe</arg>
+</arguments>
+<msg timestamp="20230223 21:41:18.333" level="INFO">Selecting frame 'css=.signin-iframe'.</msg>
+<status status="PASS" endtime="20230223 21:41:18.394" starttime="20230223 21:41:18.333"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>ap_email</arg>
+<arg>wiratest@gmail.com</arg>
+</arguments>
+<msg timestamp="20230223 21:41:18.394" level="INFO">Typing text 'wiratest@gmail.com' into text field 'ap_email'</msg>
+<status status="PASS" endtime="20230223 21:41:18.679" starttime="20230223 21:41:18.394"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>ap_password</arg>
+<arg>iqbalwira</arg>
+</arguments>
+<msg timestamp="20230223 21:41:18.686" level="INFO">Typing text 'iqbalwira' into text field 'ap_password'</msg>
+<status status="PASS" endtime="20230223 21:41:19.069" starttime="20230223 21:41:18.686"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>signInSubmit</arg>
+</arguments>
+<msg timestamp="20230223 21:41:19.069" level="INFO">Clicking element 'signInSubmit'.</msg>
+<status status="PASS" endtime="20230223 21:41:19.401" starttime="20230223 21:41:19.069"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230223 21:41:22.412" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" endtime="20230223 21:41:22.412" starttime="20230223 21:41:19.401"></status>
+</kw>
+<status status="PASS" endtime="20230223 21:41:22.412" starttime="20230223 21:41:18.329"></status>
+</kw>
+<kw name="Verify Login Page" library="Keywords">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies element identified by `locator` is found on the current page.</doc>
+<arguments>
+<arg>sizzle=${NAVBAR_MENU}:contains(My Account)</arg>
+</arguments>
+<msg timestamp="20230223 21:41:22.432" level="INFO">Current page contains element 'sizzle=.mob-nav-account:contains(My Account)'.</msg>
+<status status="PASS" endtime="20230223 21:41:22.432" starttime="20230223 21:41:22.412"></status>
+</kw>
+<status status="PASS" endtime="20230223 21:41:22.433" starttime="20230223 21:41:22.412"></status>
+</kw>
+<kw name="Search" library="Keywords">
+<arguments>
+<arg>Brain</arg>
+</arguments>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>sizzle=.text-input</arg>
+<arg>${keywords}</arg>
+</arguments>
+<msg timestamp="20230223 21:41:22.434" level="INFO">Typing text 'Brain' into text field 'sizzle=.text-input'</msg>
+<status status="PASS" endtime="20230223 21:41:22.651" starttime="20230223 21:41:22.434"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>sizzle=.header-search-btn</arg>
+</arguments>
+<msg timestamp="20230223 21:41:22.652" level="INFO">Clicking element 'sizzle=.header-search-btn'.</msg>
+<status status="PASS" endtime="20230223 21:41:23.952" starttime="20230223 21:41:22.652"></status>
+</kw>
+<status status="PASS" endtime="20230223 21:41:23.953" starttime="20230223 21:41:22.434"></status>
+</kw>
+<kw name="Click Random Book Add To Basket" library="Keywords">
+<kw name="Get Add To Basket Length" library="Keywords">
+<assign>
+<var>${length}</var>
+</assign>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>return $('.add-to-basket').length</arg>
+</arguments>
+<assign>
+<var>${addtobasket_length}</var>
+</assign>
+<msg timestamp="20230223 21:41:23.957" level="INFO">Executing JavaScript:
+return $('.add-to-basket').length</msg>
+<msg timestamp="20230223 21:41:23.982" level="INFO">${addtobasket_length} = 30</msg>
+<status status="PASS" endtime="20230223 21:41:23.982" starttime="20230223 21:41:23.954"></status>
+</kw>
+<msg timestamp="20230223 21:41:23.983" level="INFO">${length} = 30</msg>
+<status status="PASS" endtime="20230223 21:41:23.983" starttime="20230223 21:41:23.954"></status>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>random.randint(1,${length-1})</arg>
+<arg>modules=random, sys</arg>
+</arguments>
+<assign>
+<var>${random}</var>
+</assign>
+<msg timestamp="20230223 21:41:23.983" level="INFO">${random} = 27</msg>
+<status status="PASS" endtime="20230223 21:41:23.983" starttime="20230223 21:41:23.983"></status>
+</kw>
+<kw name="Scroll To Element" library="Keywords">
+<arguments>
+<arg>sizzle=${ADD_TO_BASKET}:nth(${random})</arg>
+</arguments>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<arguments>
+<arg>${element}</arg>
+<arg>timeout=3</arg>
+<arg>error=There's no ${element}</arg>
+</arguments>
+<status status="PASS" endtime="20230223 21:41:23.990" starttime="20230223 21:41:23.983"></status>
+</kw>
+<kw name="Get Vertical Position" library="Selenium2Library">
+<doc>Returns vertical position of element identified by `locator`.</doc>
+<arguments>
+<arg>${element}</arg>
+</arguments>
+<assign>
+<var>${ver}</var>
+</assign>
+<msg timestamp="20230223 21:41:24.016" level="INFO">${ver} = 2433.0</msg>
+<status status="PASS" endtime="20230223 21:41:24.016" starttime="20230223 21:41:23.990"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code.</doc>
+<arguments>
+<arg>window.scrollTo(0,${ver}-90)</arg>
+</arguments>
+<msg timestamp="20230223 21:41:24.016" level="INFO">Executing JavaScript:
+window.scrollTo(0,2433.0-90)</msg>
+<status status="PASS" endtime="20230223 21:41:24.041" starttime="20230223 21:41:24.016"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230223 21:41:25.047" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20230223 21:41:25.047" starttime="20230223 21:41:24.041"></status>
+</kw>
+<status status="PASS" endtime="20230223 21:41:25.048" starttime="20230223 21:41:23.983"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<doc>Waits until element specified with `locator` is visible.</doc>
+<arguments>
+<arg>sizzle=${ADD_TO_BASKET}:nth(${random})</arg>
+<arg>timeout=30</arg>
+</arguments>
+<status status="PASS" endtime="20230223 21:41:25.064" starttime="20230223 21:41:25.049"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>sizzle=${ADD_TO_BASKET}:nth(${random})</arg>
+</arguments>
+<msg timestamp="20230223 21:41:25.064" level="INFO">Clicking element 'sizzle=.add-to-basket:nth(27)'.</msg>
+<status status="PASS" endtime="20230223 21:41:25.134" starttime="20230223 21:41:25.064"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230223 21:41:26.140" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20230223 21:41:26.140" starttime="20230223 21:41:25.134"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>sizzle=.continue-shopping</arg>
+</arguments>
+<msg timestamp="20230223 21:41:26.141" level="INFO">Clicking element 'sizzle=.continue-shopping'.</msg>
+<status status="PASS" endtime="20230223 21:41:26.203" starttime="20230223 21:41:26.140"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230223 21:41:27.211" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20230223 21:41:27.211" starttime="20230223 21:41:26.203"></status>
+</kw>
+<status status="PASS" endtime="20230223 21:41:27.212" starttime="20230223 21:41:23.954"></status>
+</kw>
+<kw name="Click Add To Basket" library="Keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>sizzle=${ADD_TO_BASKET}:nth(2)</arg>
+</arguments>
+<msg timestamp="20230223 21:41:27.214" level="INFO">Clicking element 'sizzle=.add-to-basket:nth(2)'.</msg>
+<status status="PASS" endtime="20230223 21:41:27.296" starttime="20230223 21:41:27.214"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230223 21:41:28.307" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20230223 21:41:28.307" starttime="20230223 21:41:27.296"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>sizzle=.continue-shopping</arg>
+</arguments>
+<msg timestamp="20230223 21:41:28.307" level="INFO">Clicking element 'sizzle=.continue-shopping'.</msg>
+<status status="PASS" endtime="20230223 21:41:28.358" starttime="20230223 21:41:28.307"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230223 21:41:29.359" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20230223 21:41:29.360" starttime="20230223 21:41:28.358"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>sizzle=${ADD_TO_BASKET}:nth(3)</arg>
+</arguments>
+<msg timestamp="20230223 21:41:29.361" level="INFO">Clicking element 'sizzle=.add-to-basket:nth(3)'.</msg>
+<status status="PASS" endtime="20230223 21:41:29.427" starttime="20230223 21:41:29.360"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230223 21:41:30.438" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20230223 21:41:30.438" starttime="20230223 21:41:29.427"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>sizzle=.continue-shopping</arg>
+</arguments>
+<msg timestamp="20230223 21:41:30.442" level="INFO">Clicking element 'sizzle=.continue-shopping'.</msg>
+<status status="PASS" endtime="20230223 21:41:30.506" starttime="20230223 21:41:30.441"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230223 21:41:31.514" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20230223 21:41:31.514" starttime="20230223 21:41:30.506"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>sizzle=${ADD_TO_BASKET}:nth(4)</arg>
+</arguments>
+<msg timestamp="20230223 21:41:31.516" level="INFO">Clicking element 'sizzle=.add-to-basket:nth(4)'.</msg>
+<status status="PASS" endtime="20230223 21:41:31.574" starttime="20230223 21:41:31.515"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230223 21:41:32.574" level="INFO">Slept 1 second</msg>
+<status status="PASS" endtime="20230223 21:41:32.574" starttime="20230223 21:41:31.574"></status>
+</kw>
+<status status="PASS" endtime="20230223 21:41:32.574" starttime="20230223 21:41:27.212"></status>
+</kw>
+<kw name="Go To Basket Page" library="Keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click element identified by `locator`.</doc>
+<arguments>
+<arg>sizzle=.continue-to-basket</arg>
+</arguments>
+<msg timestamp="20230223 21:41:32.574" level="INFO">Clicking element 'sizzle=.continue-to-basket'.</msg>
+<status status="PASS" endtime="20230223 21:41:34.929" starttime="20230223 21:41:32.574"></status>
+</kw>
+<status status="PASS" endtime="20230223 21:41:34.930" starttime="20230223 21:41:32.574"></status>
+</kw>
+<kw name="Verify Basket Page" library="Keywords">
+<kw name="Location Should Contain" library="Selenium2Library">
+<doc>Verifies that current URL contains `expected`.</doc>
+<arguments>
+<arg>basket</arg>
+</arguments>
+<msg timestamp="20230223 21:41:34.955" level="INFO">Current location contains 'basket'.</msg>
+<status status="PASS" endtime="20230223 21:41:34.955" starttime="20230223 21:41:34.930"></status>
+</kw>
+<kw name="Page Should Contain" library="Selenium2Library">
+<doc>Verifies that current page contains `text`.</doc>
+<arguments>
+<arg>Your basket</arg>
+</arguments>
+<msg timestamp="20230223 21:41:34.983" level="INFO">Current page contains text 'Your basket'.</msg>
+<status status="PASS" endtime="20230223 21:41:34.983" starttime="20230223 21:41:34.955"></status>
+</kw>
+<status status="PASS" endtime="20230223 21:41:34.984" starttime="20230223 21:41:34.930"></status>
+</kw>
+<kw name="Replace Quantity" library="Keywords">
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects `*values` from list identified by `locator`</doc>
+<arguments>
+<arg>Qty_0</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20230223 21:41:34.985" level="INFO">Selecting value(s) '1' from list 'Qty_0'.</msg>
+<status status="PASS" endtime="20230223 21:41:35.227" starttime="20230223 21:41:34.985"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects `*values` from list identified by `locator`</doc>
+<arguments>
+<arg>Qty_1</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20230223 21:41:35.232" level="INFO">Selecting value(s) '2' from list 'Qty_1'.</msg>
+<status status="PASS" endtime="20230223 21:41:37.446" starttime="20230223 21:41:35.227"></status>
+</kw>
+<kw name="Select From List By Value" library="Selenium2Library">
+<doc>Selects `*values` from list identified by `locator`</doc>
+<arguments>
+<arg>Qty_2</arg>
+<arg>3</arg>
+</arguments>
+<msg timestamp="20230223 21:41:37.446" level="INFO">Selecting value(s) '3' from list 'Qty_2'.</msg>
+<status status="PASS" endtime="20230223 21:41:39.573" starttime="20230223 21:41:37.446"></status>
+</kw>
+<status status="PASS" endtime="20230223 21:41:39.573" starttime="20230223 21:41:34.984"></status>
+</kw>
+<kw type="teardown" name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" endtime="20230223 21:41:41.814" starttime="20230223 21:41:39.573"></status>
+</kw>
+<doc>As user, I want to search and add book to basket</doc>
+<status status="PASS" endtime="20230223 21:41:41.815" critical="yes" starttime="20230223 21:41:08.117"></status>
+</test>
+<status status="PASS" endtime="20230223 21:41:41.818" starttime="20230223 21:41:07.430"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="0" id="s1" name="TestCase SearchAndAddToBasket" pass="1">TestCase SearchAndAddToBasket</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
